@@ -97,13 +97,16 @@ export const useUpdateMyUser = () => {
       },
       body: JSON.stringify(formData),
     });
+
+    if (!response.ok) {
+      throw new Error("Failed to create user");
+    }
   };
 
   const {
     mutateAsync: updateUser,
     isLoading,
     isSuccess,
-    isError,
     error,
     reset,
   } = useMutation(updateMyUserRequest);
