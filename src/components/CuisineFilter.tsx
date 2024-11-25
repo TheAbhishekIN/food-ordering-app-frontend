@@ -3,7 +3,6 @@ import { Label } from "./ui/label";
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
 import { ChangeEvent } from "react";
 import { Button } from "./ui/button";
-import { spawn } from "child_process";
 
 type Props = {
   onChange: (cuisines: string[]) => void;
