@@ -8,14 +8,17 @@ function MobileNavLinks() {
     <>
       {isAuthenticated ? (
         <div className="flex flex-col w-full gap-4">
-          <Link to="/user-profile" className="font-bold hover:text-orange-500">
-            User Profile
+          <Link to="/order-status" className="font-bold hover:text-orange-500">
+            Order Status
           </Link>
           <Link
             to="/manage-restaurant"
             className="font-bold hover:text-orange-500"
           >
-            Manage Restaurant
+            My Restaurant
+          </Link>
+          <Link to="/user-profile" className="font-bold hover:text-orange-500">
+            User Profile
           </Link>
           <Button
             onClick={() => logout()}
