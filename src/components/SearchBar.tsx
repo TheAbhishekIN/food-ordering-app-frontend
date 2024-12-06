@@ -72,6 +72,9 @@ const SearchBar = ({ onSubmit, onReset, placeHolder, searchQuery }: Props) => {
             </FormItem>
           )}
         />
+        {typeof searchQuery === "undefined" && (
+          <p>Search for, Jaipur, London, Manchester</p>
+        )}
 
         <Button
           onClick={handleReset}
