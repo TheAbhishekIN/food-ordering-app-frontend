@@ -72,9 +72,6 @@ const SearchBar = ({ onSubmit, onReset, placeHolder, searchQuery }: Props) => {
             </FormItem>
           )}
         />
-        {typeof searchQuery === "undefined" && (
-          <p>Search for, Jaipur, London, Manchester</p>
-        )}
 
         <Button
           onClick={handleReset}
@@ -88,6 +85,9 @@ const SearchBar = ({ onSubmit, onReset, placeHolder, searchQuery }: Props) => {
           Search
         </Button>
       </form>
+      {typeof searchQuery === "undefined" && (
+        <p>Search for, Jaipur, London, Manchester</p>
+      )}
     </Form>
   );
 };
